@@ -1,3 +1,12 @@
+## How to run the game
+```python
+"""
+cd /cli_snake_game/cli_snake_game
+python ./main.py
+
+"""
+```
+
 ## Required Python third-party packages
 ```python
 """
