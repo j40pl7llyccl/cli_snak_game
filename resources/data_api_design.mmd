@@ -1,0 +1,29 @@
+classDiagram
+    class Game{
+        -int score
+        -Snake snake
+        -Food food
+        +__init__(self)
+        +run(self)
+        +end_game(self)
+    }
+    class Snake{
+        -List[Tuple[int, int]] body
+        +__init__(self)
+        +move(self, direction: str)
+        +eat(self, food: Food)
+        +check_collision(self)
+    }
+    class Food{
+        -Tuple[int, int] position
+        +__init__(self)
+        +generate(self)
+    }
+    class Score{
+        -int score
+        +__init__(self)
+        +increment(self)
+    }
+    Game "1" -- "1" Snake: has
+    Game "1" -- "1" Food: has
+    Game "1" -- "1" Score: has
